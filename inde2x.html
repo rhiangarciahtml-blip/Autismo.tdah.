@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kit Prático para Autismo & TDAH | Método Comprovado</title>
+    <meta name="description" content="Método completo para ajudar crianças com Autismo e TDAH. Atividades práticas, rotina estruturada e suporte especializado. Resultados em 30 dias ou devolvemos seu dinheiro.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" type="text/css" href="css/global.css"
+    
+    <!-- Facebook Pixel -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', 'YOUR_PIXEL_ID');
+    fbq('track', 'PageView');
+    </script>
+    <noscript>
+    <img height="1" width="1" style="display:none" 
+    src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID&ev=PageView&noscript=1"/>
+    </noscript>
+</head>
+<body>
+     <script> src="java.js"></script>
+    <!-- Pre-Landing Quiz Modal -->
+    <div class="quiz-overlay" id="quizOverlay" aria-hidden="true">
+        <div class="quiz-modal" role="dialog" aria-modal="true" aria-labelledby="quizTitle">
+            <button class="quiz-close" id="quizClose" aria-label="Fechar quiz"><i class="fas fa-times"></i></button>
+            <div class="quiz-header">
+                <h2 id="quizTitle">Ajude-nos a personalizar sua experiência</h2>
+                <p class="quiz-subtitle">Responda 5 perguntas rápidas e receba recomendações ideais para sua rotina</p>
+                <div class="quiz-progress"><div class="quiz-progress-bar" id="quizProgress" style="width: 0%"></div></div>
+            </div>
+            <div class="quiz-body">
+                <!-- Step 1 -->
+                <div class="quiz-step" data-step="1">
+                    <h3>Para quem é o kit?</h3>
+                    <div class="quiz-options" role="group" aria-label="Para quem é o kit?">
+                        <label class="quiz-option"><input type="radio" name="q1" value="meu-filho"> Meu filho(a)</label>
+                        <label class="quiz-option"><input type="radio" name="q1" value="aluno"> Meu aluno(a)</label>
+                        <label class="quiz-option"><input type="radio" name="q1" value="outro"> Outro</label>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="quiz-step" data-step="2" hidden>
+                    <h3>Qual principal objetivo agora?</h3>
+                    <div class="quiz-options" role="group" aria-label="Objetivo principal">
+                        <label class="quiz-option"><input type="radio" name="q2" value="foco"> Aumentar foco e atenção</label>
+                        <label class="quiz-option"><input type="radio" name="q2" value="rotina"> Organizar rotina</label>
+                        <label class="quiz-option"><input type="radio" name="q2" value="comportamento"> Reduzir crises/ansiedade</label>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="quiz-step" data-step="3" hidden>
+                    <h3>Quanto tempo por dia você pode dedicar?</h3>
+                    <div class="quiz-options" role="group" aria-label="Tempo disponível">
+                        <label class="quiz-option"><input type="radio" name="q3" value="15"> 10–15 min</label>
+                        <label class="quiz-option"><input type="radio" name="q3" value="30"> 20–30 min</label>
+                        <label class="quiz-option"><input type="radio" name="q3" value="60"> 40–60 min</label>
+                    </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="quiz-step" data-step="4" hidden>
+                    <h3>Preferência de materiais?</h3>
+                    <div class="quiz-options" role="group" aria-label="Preferência de materiais">
+                        <label class="quiz-option"><input type="radio" name="q4" value="imprimir"> Imprimir em casa</label>
+                        <label class="quiz-option"><input type="radio" name="q4" value="digital"> Usar no celular/tablet</label>
+                        <label class="quiz-option"><input type="radio" name="q4" value="ambos"> Ambos</label>
+                    </div>
+                </div>
+
+                <!-- Step 5 -->
+                <div class="quiz-step" data-step="5" hidden>
+                    <h3>Quando pretende começar?</h3>
+                    <div class="quiz-options" role="group" aria-label="Quando pretende começar">
+                        <label class="quiz-option"><input type="radio" name="q5" value="hoje"> Hoje</label>
+                        <label class="quiz-option"><input type="radio" name="q5" value="essa-semana"> Esta semana</label>
+                        <label class="quiz-option"><input type="radio" name="q5" value="em-breve"> Em breve</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="quiz-footer">
+                <button class="quiz-btn outline" id="quizBack" disabled>Voltar</button>
+                <button class="quiz-btn" id="quizNext">Continuar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header with Countdown -->
+    <div class="header-bar">
+        <div class="container">
+            <div class="countdown">
+                <i class="fas fa-clock"></i>
+                <span class="countdown-label ribbon-text">Oferta expira em:</span>
+                <span id="countdown">02:00:00</span>
+            </div>
+            <div class="sale-tag">
+                <i class="fas fa-tag"></i>
+                <span class="sale-badge">50% DE DESCONTO - ÚLTIMAS HORAS!</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <span class="badge">MÉTODO APROVADO POR ESPECIALISTAS</span>
+                    <h1>Transforme a rotina do seu filho com TEA <span class="ribbon-text">(Autismo)</span> ou TDAH em 30 dias</h1>
+                    <p class="subtitle">Protocolo prático, validado por especialistas, com atividades visuais e passo a passo para reduzir o estresse, aumentar o foco e promover autonomia — simples de aplicar em casa.</p>
+                    
+                    <ul class="benefit-list">
+                        <li><i class="fas fa-check-circle"></i> Reduza estresse e ansiedade no dia a dia</li>
+                        <li><i class="fas fa-check-circle"></i> Aumente o foco e a concentração nas atividades</li>
+                        <li><i class="fas fa-check-circle"></i> Crie uma rotina estruturada e previsível</li>
+                        <li><i class="fas fa-check-circle"></i> Método 100% prático, aprovado por especialistas</li>
+                    </ul>
+                    
+                    <div class="cta-container">
+                        <div class="separator"><span>Garantia de Satisfação</span></div>
+                        <!-- Hero CTA removed as requested -->
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <!-- Video section removed as requested -->
+                    
+                    <!-- Moved Guarantee Section -->
+                    <div class="money-back-guarantee">
+                        <div class="guarantee-card">
+                            <div class="guarantee-header">
+                                <h3>Garantia 100% de Satisfação — ou Seu Dinheiro de Volta</h3>
+                                <div class="guarantee-tag">Teste sem risco por 7 dias</div>
+                            </div>
+                            
+                            <p class="highlight">Acesse tudo agora e experimente por <strong>7 dias completos</strong>. Se não ficar totalmente satisfeito, devolvemos <strong>100% do seu dinheiro</strong> — sem perguntas.</p>
+                            
+                            <div class="guarantee-features">
+                                <div class="feature">
+                                    <div class="feature-icon">
+                                        <i class="fas fa-calendar-check"></i>
+                                    </div>
+                                    <div class="feature-text">
+                                        <h4>7 Dias para Decidir</h4>
+                                        <p>Avalie com calma: teste as atividades no seu ritmo.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="feature">
+                                    <div class="feature-icon">
+                                        <i class="fas fa-shield-alt"></i>
+                                    </div>
+                                    <div class="feature-text">
+                                        <h4>Garantia Total 100%</h4>
+                                        <p>Não amou? Reembolso imediato e sem burocracia.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="feature">
+                                    <div class="feature-icon">
+                                        <i class="fas fa-headset"></i>
+                                    </div>
+                                    <div class="feature-text">
+                                        <h4>Suporte Prioritário</h4>
+                                        <p>Equipe disponível para te orientar pelo WhatsApp.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Trust badges removed as requested -->
+        </div>
+    </header>
+
+    <!-- Special Offer Banner -->
+    <section class="special-offer" id="offer">
+        <div class="container">
+            <div class="discount-ribbon">
+                <div class="discount-content">
+                    <i class="fas fa-clock"></i>
+                    <span>50% DE DESCONTO - ÚLTIMAS HORAS!</span>
+                </div>
+            </div>
+            <div class="offer-content">
+                <div class="offer-badge">
+                    <i class="fas fa-gift"></i>
+                    <span>OFERTA ESPECIAL</span>
+                </div>
+                <h2>Kit Completo de Atividades para Autismo & TDAH</h2>
+                <p class="offer-description">Transforme a rotina do seu filho com nosso método comprovado</p>
+                
+                <div class="pricing">
+                    <div class="original-price">De R$ 197,00 por apenas</div>
+                    <div class="current-price">R$ 29,90</div>
+                    <div class="payment-method">ou 3x de R$ 9,97 sem juros</div>
+                </div>
+                
+                <a href="https://go.disruptybr.com.br/qlsxsjj6rm?utm_source=chatgpt.com" class="cta-button pulse" id="main-cta">
+                    <span class="cta-main">QUERO O KIT AGORA</span>
+                    <span class="cta-sub">Comece a transformar a vida do seu filho hoje mesmo!</span>
+                    <span class="cta-bonus">+ Bônus Exclusivo: Guia Rápido de Atividades</span>
+                </a>
+                
+                <!-- Guarantee badge removed as requested -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Satisfaction Guarantee Section -->
+    <section class="guarantee-section">
+        <div class="container">
+            <div class="guarantee-badge">
+                <i class="fas fa-shield-alt"></i>
+                <span>Garantia de Satisfação</span>
+            </div>
+            
+            <div class="guarantee-content">
+                <h2>Risco Zero para Você</h2>
+                <p>Estamos tão confiantes de que você vai adorar nosso Kit que oferecemos uma garantia incondicional de 7 dias. Se por qualquer motivo você não ficar satisfeito, devolvemos 100% do seu dinheiro, sem perguntas e sem burocracia. Você não tem nada a perder!</p>
+                
+                <div class="guarantee-stamp">
+                    <i class="fas fa-check"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">O que as famílias e professores estão dizendo</h2>
+            <p class="section-subtitle">Resultados reais com uma rotina simples de aplicar</p>
+
+            <div class="testimonials-grid">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <img class="avatar" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=200&auto=format&fit=crop" alt="Foto da mãe Ana Paula">
+                        <div>
+                            <h4>Ana Paula</h4>
+                            <span class="role">Mãe do Lucas, 6 anos</span>
+                        </div>
+                    </div>
+                    <div class="stars" aria-label="5 de 5 estrelas">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="quote">“Em duas semanas já percebemos menos crises e muito mais foco nas atividades. O passo a passo é simples e funcionou de verdade aqui em casa.”</p>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <img class="avatar" src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=200&auto=format&fit=crop" alt="Foto do professor Marcos">
+                        <div>
+                            <h4>Prof. Marcos</h4>
+                            <span class="role">Pedagogo e professor</span>
+                        </div>
+                    </div>
+                    <div class="stars" aria-label="5 de 5 estrelas">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="quote">“As atividades são bem estruturadas e facilitam muito a rotina. Recomendo para pais e educadores que buscam resultados consistentes.”</p>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <img class="avatar" src="https://images.unsplash.com/photo-1554151228-14d9def656e4?q=80&w=200&auto=format&fit=crop" alt="Foto da mãe Juliana">
+                        <div>
+                            <h4>Juliana</h4>
+                            <span class="role">Mãe da Sofia, 8 anos</span>
+                        </div>
+                    </div>
+                    <div class="stars" aria-label="5 de 5 estrelas">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="quote">“Foi o que faltava para organizarmos os horários aqui em casa. Minha filha ficou mais calma e participativa.”</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="section-title">Perguntas Frequentes</h2>
+            <p class="section-subtitle">Tire suas dúvidas sobre o Kit Prático para Autismo & TDAH</p>
+            
+            <div class="faq-container">
+                <!-- FAQ Item 1 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Como o kit vai ajudar meu filho?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Nosso kit foi desenvolvido com atividades específicas que auxiliam no desenvolvimento de habilidades cognitivas, motoras e sociais, promovendo maior autonomia e facilitando o aprendizado de forma lúdica e estruturada.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Para qual idade é recomendado?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>O kit é indicado para crianças e adolescentes entre 3 e 12 anos, com atividades adaptáveis para diferentes níveis de desenvolvimento, podendo ser personalizado conforme a necessidade de cada criança.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Quanto tempo por dia devo dedicar às atividades?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Recomendamos de 15 a 30 minutos diários, mas isso pode variar conforme a disposição da criança. O importante é manter a consistência e respeitar o ritmo de cada um.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Preciso ter conhecimento prévio para usar o kit?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Não é necessário conhecimento prévio. O kit vem com instruções detalhadas e suporte completo para auxiliar pais e cuidadores em todas as etapas.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 5 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Como é feita a entrega do material?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>O material é 100% digital. Após a confirmação do pagamento, você receberá um e-mail com o link para download de todos os arquivos em formato PDF, prontos para impressão.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/5567998565370?text=Olá! Quero saber mais sobre o Kit Autismo e TDAH" class="whatsapp-float" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-whatsapp"></i>
+        <span>Fale Conosco</span>
+    </a>
+
+    <script src="js/script-improved.js"></script>
+    <script src="js/faq.js"></script>
+</body>
+</html>
